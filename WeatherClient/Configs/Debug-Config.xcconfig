@@ -1,0 +1,12 @@
+//
+//  Debug-Config.xcconfig
+//  WeatherClient
+//
+//  Created by Andi Cho on 8/25/19.
+//  Copyright © 2019 Andi Cho. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+DARKSKY_API_KEY = b035c3e3d9a4a4f0c0e944e08a29cc7f
