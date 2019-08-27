@@ -9,11 +9,30 @@
 import UIKit
 import CoreLocation
 
+class LocationManager: NSObject {
+    
+    
+    // - Private
+    private let locationManager = CLLocationManager()
+    
+    
+    // - API
+    public var exposedLocation: CLLocation? {
+        return self.locationManager.location
+    }
+    
+    override init() {
+        super.init()
+        self.locationManager.delegate = self as? CLLocationManagerDelegate
+        self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        self.locationManager.requestWhenInUseAuthorization()
+    }
+}
+
 class LocationServices: NSObject {
     var newestLocation: ((CLLocationCoordinate2D?) -> Void)?
     var statusUpdated: ((CLAuthorizationStatus?) -> Void)?
     let manager: CLLocationManager
-    
     var status: CLAuthorizationStatus {
         return CLLocationManager.authorizationStatus()
     }
@@ -22,6 +41,7 @@ class LocationServices: NSObject {
         self.manager = manager
         super.init()
         manager.delegate = self
+        manager.desiredAccuracy = kCLLocationAccuracyBest
         
     }
     
@@ -50,4 +70,5 @@ extension LocationServices: CLLocationManagerDelegate {
         print("Location status: \(status)")
         self.statusUpdated?(status)
     }
+    
 }

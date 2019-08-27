@@ -11,13 +11,15 @@
 		0416634D2312BEA90007AA7B /* ForecastProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0416634C2312BEA90007AA7B /* ForecastProvider.swift */; };
 		0416635023130BB70007AA7B /* Debug-Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 0416634F23130BB70007AA7B /* Debug-Config.xcconfig */; };
 		0416635223130F030007AA7B /* DailyForecastViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0416635123130F030007AA7B /* DailyForecastViewModel.swift */; };
+		0416635A23137DFD0007AA7B /* ForecastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0416635923137DFD0007AA7B /* ForecastViewController.swift */; };
+		0416635C23138AC40007AA7B /* CurrentForecastViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0416635B23138AC40007AA7B /* CurrentForecastViewModel.swift */; };
+		0416636423144F500007AA7B /* DailyForecastCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0416636323144F500007AA7B /* DailyForecastCollectionViewCell.swift */; };
+		041663682314BCB00007AA7B /* cloudy-foggy-windy-weather-symbol.png in Resources */ = {isa = PBXBuildFile; fileRef = 041663672314BCB00007AA7B /* cloudy-foggy-windy-weather-symbol.png */; };
 		041E01BC231175580051D6FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041E01BB231175580051D6FF /* AppDelegate.swift */; };
 		041E01BE231175580051D6FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041E01BD231175580051D6FF /* ViewController.swift */; };
 		041E01C1231175580051D6FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 041E01BF231175580051D6FF /* Main.storyboard */; };
 		041E01C32311755C0051D6FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 041E01C22311755C0051D6FF /* Assets.xcassets */; };
 		041E01C62311755C0051D6FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 041E01C42311755C0051D6FF /* LaunchScreen.storyboard */; };
-		041E01D1231178B90051D6FF /* ForecastTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041E01D0231178B90051D6FF /* ForecastTableViewController.swift */; };
-		041E01D3231178D70051D6FF /* DailyForecastTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041E01D2231178D70051D6FF /* DailyForecastTableViewCell.swift */; };
 		041E01D6231227F50051D6FF /* Forecast.json in Resources */ = {isa = PBXBuildFile; fileRef = 041E01D5231227F50051D6FF /* Forecast.json */; };
 		0449275023122E9A004A446C /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0449274F23122E9A004A446C /* Forecast.swift */; };
 		9807C637FDA48956CD2A6F49 /* Pods_WeatherClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0557C4D2A7C406A95D8643BA /* Pods_WeatherClient.framework */; };
@@ -28,6 +30,10 @@
 		0416634C2312BEA90007AA7B /* ForecastProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastProvider.swift; sourceTree = "<group>"; };
 		0416634F23130BB70007AA7B /* Debug-Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Debug-Config.xcconfig"; sourceTree = "<group>"; };
 		0416635123130F030007AA7B /* DailyForecastViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyForecastViewModel.swift; sourceTree = "<group>"; };
+		0416635923137DFD0007AA7B /* ForecastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastViewController.swift; sourceTree = "<group>"; };
+		0416635B23138AC40007AA7B /* CurrentForecastViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentForecastViewModel.swift; sourceTree = "<group>"; };
+		0416636323144F500007AA7B /* DailyForecastCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyForecastCollectionViewCell.swift; sourceTree = "<group>"; };
+		041663672314BCB00007AA7B /* cloudy-foggy-windy-weather-symbol.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cloudy-foggy-windy-weather-symbol.png"; sourceTree = "<group>"; };
 		041E01B8231175580051D6FF /* WeatherClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		041E01BB231175580051D6FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		041E01BD231175580051D6FF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,8 +41,6 @@
 		041E01C22311755C0051D6FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		041E01C52311755C0051D6FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		041E01C72311755C0051D6FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		041E01D0231178B90051D6FF /* ForecastTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastTableViewController.swift; sourceTree = "<group>"; };
-		041E01D2231178D70051D6FF /* DailyForecastTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyForecastTableViewCell.swift; sourceTree = "<group>"; };
 		041E01D5231227F50051D6FF /* Forecast.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Forecast.json; sourceTree = "<group>"; };
 		0449274F23122E9A004A446C /* Forecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
 		0557C4D2A7C406A95D8643BA /* Pods_WeatherClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeatherClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -104,6 +108,7 @@
 				041E01BD231175580051D6FF /* ViewController.swift */,
 				041E01BF231175580051D6FF /* Main.storyboard */,
 				041E01C22311755C0051D6FF /* Assets.xcassets */,
+				041663672314BCB00007AA7B /* cloudy-foggy-windy-weather-symbol.png */,
 				041E01C42311755C0051D6FF /* LaunchScreen.storyboard */,
 				041E01C72311755C0051D6FF /* Info.plist */,
 			);
@@ -113,8 +118,9 @@
 		041E01CD2311784E0051D6FF /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				041E01D0231178B90051D6FF /* ForecastTableViewController.swift */,
 				0416635123130F030007AA7B /* DailyForecastViewModel.swift */,
+				0416635B23138AC40007AA7B /* CurrentForecastViewModel.swift */,
+				0416635923137DFD0007AA7B /* ForecastViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -122,7 +128,7 @@
 		041E01CF231178670051D6FF /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				041E01D2231178D70051D6FF /* DailyForecastTableViewCell.swift */,
+				0416636323144F500007AA7B /* DailyForecastCollectionViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -217,6 +223,7 @@
 				041E01C32311755C0051D6FF /* Assets.xcassets in Resources */,
 				0416635023130BB70007AA7B /* Debug-Config.xcconfig in Resources */,
 				041E01C1231175580051D6FF /* Main.storyboard in Resources */,
+				041663682314BCB00007AA7B /* cloudy-foggy-windy-weather-symbol.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,14 +285,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				041E01D3231178D70051D6FF /* DailyForecastTableViewCell.swift in Sources */,
-				041E01D1231178B90051D6FF /* ForecastTableViewController.swift in Sources */,
 				041E01BE231175580051D6FF /* ViewController.swift in Sources */,
+				0416635C23138AC40007AA7B /* CurrentForecastViewModel.swift in Sources */,
+				0416636423144F500007AA7B /* DailyForecastCollectionViewCell.swift in Sources */,
 				0416634D2312BEA90007AA7B /* ForecastProvider.swift in Sources */,
 				041E01BC231175580051D6FF /* AppDelegate.swift in Sources */,
 				0416635223130F030007AA7B /* DailyForecastViewModel.swift in Sources */,
 				0416634B2312B2000007AA7B /* LocationServices.swift in Sources */,
 				0449275023122E9A004A446C /* Forecast.swift in Sources */,
+				0416635A23137DFD0007AA7B /* ForecastViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

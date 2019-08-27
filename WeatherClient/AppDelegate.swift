@@ -17,11 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let locationService = LocationServices()
     let forecastProvider = MoyaProvider<ForecastProvider>()
     static let apiKey = Bundle.main.object(forInfoDictionaryKey: "DARKSKY_API_KEY") as! String
-
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        // Location serv ice callbacks
+        // Location service callbacks
         locationService.newestLocation = { [weak self] coordinate in
             guard let self = self, let coordinate = coordinate else { return }
             print("Location is: \(coordinate)")
@@ -52,9 +50,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 do {
                 let forecast = try Forecast(data: response.data)
                 let viewModels = forecast.daily.data.compactMap(DailyForecastViewModel.init)
-                let forecastViewController = AppDelegate.viewControllerInNav(ofType: ForecastTableViewController.self, in: self.window)
-                //print("Forecast: \n\n", forecast)
-                forecastViewController?.viewModels = viewModels
+                // get current stats
+                let currTime = forecast.currently.time
+                let currIcon = forecast.currently.icon
+                let currTemp = forecast.currently.temperature
+                let currSummary = forecast.currently.summary
+                let currWind = forecast.currently.windSpeed
+                let currPrecip = forecast.currently.precipIntensity
+                // set VC
+                let forecastViewController = AppDelegate.viewControllerInNav(ofType: ForecastViewController.self, in: self.window)
+                forecastViewController?.currentTime = currTime
+                forecastViewController?.currentIcon = currIcon
+                forecastViewController?.currentTemp = currTemp
+                forecastViewController?.currentSummary = currSummary
+                forecastViewController?.currentWind = currWind
+                forecastViewController?.currentPrecip = currPrecip
+                // get table view 
+                forecastViewController?.dailyViewModels = viewModels
                 } catch {
                     print("Failed to get forecast: \(error)")
                 }
